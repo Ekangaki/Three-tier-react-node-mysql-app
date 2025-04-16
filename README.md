@@ -43,7 +43,7 @@ ssh -A -i Batch5keypair-Office-laptop.pem ec2-user@bastion_host_public_ip
 You will be prompted to enter "yes"
 ```
 
-5. Uisng the Public Intsnace to Connet to the Private Instance. To connect private instance from the bastion host:
+5. Usng the Public Intsnace to Connet to the Private Instance. To connect private instance from the bastion host:
 
 ```bash
 ssh ec2-user@private_instance_private_ip 

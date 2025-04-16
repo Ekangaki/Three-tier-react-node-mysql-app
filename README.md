@@ -30,15 +30,20 @@ eval "$(ssh-agent -s)"
 
 ```bash
 ssh-add your_key.pem
+ssh-add -K ./Batch5keypair-Office-laptop.pem
 ```
 
 4. To ssh into bastion host with agent forwarding:
 
 ```bash
-ssh -A ec2-user@bastion_host_public_ip
+ssh -A -i Batch5keypair-Office-laptop.pem ec2-user@bastion_host_public_ip
 ```
 
-5. To connect private instance from the bastion host:
+```bash
+You will be prompted to enter "yes"
+```
+
+5. Uisng the Public Intsnace to Connet to the Private Instance. To connect private instance from the bastion host:
 
 ```bash
 ssh ec2-user@private_instance_private_ip 
